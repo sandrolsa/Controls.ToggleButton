@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Controls.ToggleButton</id>
+    <version>1.0.0</version>
+    <authors>SeuNome</authors>
+    <owners>SeuNome</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Um controle ToggleButton customizado para WinForms.</description>
+    <tags>winforms toggle button controle</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\Controls.ToggleButton.dll" target="lib\net48" />
+  </files>
+</package>

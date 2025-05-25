@@ -1,0 +1,6 @@
+C:\DEV\pessoal\nuget\Controls.ToggleButton\bin\Release\Controls.ToggleButton.dll
+C:\DEV\pessoal\nuget\Controls.ToggleButton\bin\Release\Controls.ToggleButton.pdb
+C:\DEV\pessoal\nuget\Controls.ToggleButton\obj\Release\Controls.ToggleButton.csproj.AssemblyReference.cache
+C:\DEV\pessoal\nuget\Controls.ToggleButton\obj\Release\Controls.ToggleButton.csproj.CoreCompileInputs.cache
+C:\DEV\pessoal\nuget\Controls.ToggleButton\obj\Release\Controls.ToggleButton.dll
+C:\DEV\pessoal\nuget\Controls.ToggleButton\obj\Release\Controls.ToggleButton.pdb
