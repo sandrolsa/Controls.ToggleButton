@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
 
-namespace Controls
+namespace ToggleSwitch
 {
-    public class ToggleButton : CheckBox
+    public class ToggleSwitch : CheckBox
     {
-        //Fields
-        private Color onBackColor = Color.MediumSlateBlue;
-        private Color onToggleColor = Color.WhiteSmoke;
-        private Color offBackColor = Color.Gray;
-        private Color offToggleColor = Color.Gainsboro;
+        // Properties var
+        private Color onBackColor = Color.RoyalBlue;
+        private Color onBtnColor = Color.White;
+        private Color offBackColor = Color.DarkGray;
+        private Color offBtnColor = Color.FromKnownColor(KnownColor.WindowFrame);
         private bool solidStyle = true;
 
+        //Properties Fields
         [Category("ToggleButtons")]
-        //Properties
+        [DisplayName("Switch-On Back Color")]
         public Color OnBackColor
         {
             get
@@ -30,42 +29,46 @@ namespace Controls
                 this.Invalidate();
             }
         }
-        public Color OnToggleColor
+        [DisplayName("Switch-On Button Color")]
+        public Color OnBtnColor
         {
             get
             {
-                return onToggleColor;
+                return onBtnColor; // Read actual color
             }
             set
             {
-                onToggleColor = value;
-                this.Invalidate();
+                onBtnColor = value;
+                this.Invalidate(); // Write new color
             }
         }
+        [DisplayName("Switch-Off Back Color")]
         public Color OffBackColor
         {
             get
             {
-                return offBackColor;
+                return offBackColor; // Read actual color
             }
             set
             {
-                offBackColor = value;
-                this.Invalidate();
+                offBackColor = value;   
+                this.Invalidate();  // Write new color
             }
         }
-        public Color OffToggleColor
+        [DisplayName("Switch-Off Button Color")]
+        public Color OffBtnColor
         {
             get
             {
-                return offToggleColor;
+                return offBtnColor; // Read actual color
             }
             set
             {
-                offToggleColor = value;
-                this.Invalidate();
+                offBtnColor = value;
+                this.Invalidate(); // Write new color
             }
         }
+
 
         public override string Text
         {
@@ -75,11 +78,12 @@ namespace Controls
             }
             set
             {
-
+                // Forces non-text written.
             }
         }
 
         [DefaultValue(true)]
+        [DisplayName("Solid State")]
         public bool SolidStyle
         {
             get
@@ -94,7 +98,7 @@ namespace Controls
         }
 
         //Constructor
-        public ToggleButton()
+        public ToggleSwitch()
         {
             this.MinimumSize = new Size(45, 22);
         }
@@ -116,13 +120,18 @@ namespace Controls
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            int toggleSize = this.Height - 5;
+            base.OnPaint(pevent);
+
             pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+
+            // Clear
             pevent.Graphics.Clear(this.Parent.BackColor);
+
+            int toggleSize = this.Height - 9;
+            int toggleY = (this.Height - toggleSize) / 2;
 
             if (this.Checked) //On
             {
-                //Draw the control surface
                 if (solidStyle)
                 {
                     pevent.Graphics.FillPath(new SolidBrush(onBackColor), GetFigurePath());
@@ -131,24 +140,23 @@ namespace Controls
                 {
                     pevent.Graphics.DrawPath(new Pen(onBackColor, 2), GetFigurePath());
                 }
-                //Draw the toggle
-                pevent.Graphics.FillEllipse(new SolidBrush(onToggleColor),
-                    new Rectangle(this.Width - this.Height + 1, 2, toggleSize, toggleSize));
+
+                pevent.Graphics.FillEllipse(new SolidBrush(onBtnColor),
+                    new Rectangle(this.Width - this.Height +1, toggleY, toggleSize, toggleSize));
             }
             else //Off
             {
-                //Draw the control surface
                 if (solidStyle)
                 {
                     pevent.Graphics.FillPath(new SolidBrush(offBackColor), GetFigurePath());
                 }
                 else
                 {
-                    pevent.Graphics.DrawPath(new Pen(OffBackColor, 2), GetFigurePath());
+                    pevent.Graphics.DrawPath(new Pen(offBackColor, 2), GetFigurePath());
                 }
-                //Draw the toggle
-                pevent.Graphics.FillEllipse(new SolidBrush(offToggleColor),
-                    new Rectangle(2, 2, toggleSize, toggleSize));
+
+                pevent.Graphics.FillEllipse(new SolidBrush(offBtnColor),
+                    new Rectangle(6, toggleY, toggleSize, toggleSize));
             }
         }
     }

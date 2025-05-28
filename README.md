@@ -1,8 +1,8 @@
 
-# Controls.ToggleButton
+# New.ToggleSwitch Control (.NET Framework 4.8)
 
-Um botão selector do tipo toggle-switch personalizável para aplicações **Windows Forms (.NET Framework)**.  
-Ideal para substituir `CheckBox` com um visual mais amigável e profissional.
+`New.ToggleSwitch` é um botão seletor do tipo On/Off personalizável para aplicações **Windows Forms (.NET Framework)**.  
+Ideal para substituir `CheckBox` com um visual mais moderno e profissional, baseado no novo layout do Windows.
 
 ---
 
@@ -23,13 +23,13 @@ Ideal para substituir `CheckBox` com um visual mais amigável e profissional.
 Você pode instalar usando o **Package Manager Console**:
 
 ```
-Install-Package Controls.ToggleButton
+Install-Package New.ToggleSwitch
 ```
 
 Ou pela **.NET CLI**:
 
 ```
-dotnet add package Controls.ToggleButton
+dotnet add package New.ToggleSwitch
 ```
 
 ---
@@ -39,9 +39,9 @@ dotnet add package Controls.ToggleButton
 Adicione o controle programaticamente:
 
 ```csharp
-using Controls;
+using ToggleSwitch;
 
-var toggle = new ToggleButton
+var toggle = new ToggleSwitch
 {
     OnBackColor = Color.MediumSlateBlue,
     OnToggleColor = Color.WhiteSmoke,
@@ -51,7 +51,7 @@ var toggle = new ToggleButton
     Location = new Point(30, 30)
 };
 
-this.Controls.Add(toggle);
+this.Add(toggle);
 ```
 
 ---

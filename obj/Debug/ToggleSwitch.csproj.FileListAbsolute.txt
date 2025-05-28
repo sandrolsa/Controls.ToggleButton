@@ -1,0 +1,6 @@
+C:\DEV\pessoal\nuget\ToggleSwitch\obj\Debug\ToggleSwitch.csproj.AssemblyReference.cache
+C:\DEV\pessoal\nuget\ToggleSwitch\obj\Debug\ToggleSwitch.csproj.CoreCompileInputs.cache
+C:\DEV\pessoal\nuget\ToggleSwitch\bin\Debug\New.ToggleSwitch.dll
+C:\DEV\pessoal\nuget\ToggleSwitch\bin\Debug\New.ToggleSwitch.pdb
+C:\DEV\pessoal\nuget\ToggleSwitch\obj\Debug\New.ToggleSwitch.dll
+C:\DEV\pessoal\nuget\ToggleSwitch\obj\Debug\New.ToggleSwitch.pdb

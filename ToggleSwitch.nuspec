@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>New.ToggleSwitch</id>
+    <version>1.1.0</version>
+    <authors>Sandrolsa</authors>
+    <owners>Sandro Luiz</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Um controle Swith ON/Off customizado para WinForms (.NET Framework 4.8).</description>
+    <tags>WPF winforms toggle switch button control</tags>
+    <readme>readme.md</readme>
+    <dependencies>
+    </dependencies>
+  </metadata>
+<files>
+  <file src="bin\Release\New.ToggleSwitch.dll" target="lib\net48\" />
+  <file src="readme.md" target="" />
+</files>
+</package>

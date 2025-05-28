@@ -4,3 +4,5 @@ C:\DEV\pessoal\nuget\Controls.ToggleButton\obj\Release\Controls.ToggleButton.csp
 C:\DEV\pessoal\nuget\Controls.ToggleButton\obj\Release\Controls.ToggleButton.csproj.CoreCompileInputs.cache
 C:\DEV\pessoal\nuget\Controls.ToggleButton\obj\Release\Controls.ToggleButton.dll
 C:\DEV\pessoal\nuget\Controls.ToggleButton\obj\Release\Controls.ToggleButton.pdb
+C:\DEV\pessoal\nuget\Controls.ToggleButton\obj\Release\Controls.ToggleButton.Form1.resources
+C:\DEV\pessoal\nuget\Controls.ToggleButton\obj\Release\Controls.ToggleButton.csproj.GenerateResource.cache
